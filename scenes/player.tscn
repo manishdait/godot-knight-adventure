@@ -178,7 +178,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1000127121]
 sprite_frames = SubResource("SpriteFrames_1f644")
-animation = &"jump"
+animation = &"idel"
 autoplay = "idel"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=330530938]
