@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bn27g8vnmbl0a"]
+
+[ext_resource type="Script" uid="uid://up2swqdctjym" path="res://scripts/main_screen.gd" id="1_aum10"]
+[ext_resource type="FontFile" uid="uid://d0p5vll3ribkj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_lushf"]
+[ext_resource type="FontFile" uid="uid://cd6g8oaxbsvc7" path="res://assets/fonts/PixelOperator8.ttf" id="3_w87pm"]
+
+[sub_resource type="Theme" id="Theme_fgkus"]
+
+[node name="MainScreen" type="Control" unique_id=1864569678]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aum10")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=236153452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=219205009]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_fgkus")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=847286601]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=16385697]
+layout_mode = 2
+theme_override_constants/line_spacing = 6
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_lushf")
+theme_override_font_sizes/font_size = 32
+text = "Knight
+Adventure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1374512267]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_w87pm")
+theme_override_font_sizes/font_size = 24
+text = "Play"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

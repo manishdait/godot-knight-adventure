@@ -6,9 +6,9 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	hurt_sound.play()
 	body.get_node("CollisionShape2D").queue_free()
-	print("You Died")
-	timer.start()
-	
 
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
+
+
+
+func _on_hurt_sound_finished() -> void:
+	get_tree().change_scene_to_file("res://scenes/death_screen.tscn")

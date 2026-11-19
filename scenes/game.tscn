@@ -418,11 +418,11 @@ script = ExtResource("8_0tnpc")
 [node name="ScoreLabel" type="Label" parent="GameManager" unique_id=752859611]
 offset_left = 445.0
 offset_top = -166.0
-offset_right = 569.0
+offset_right = 556.0
 offset_bottom = -147.0
 theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("9_vtaks")
 theme_override_font_sizes/font_size = 8
-text = "You collected 
-x coins"
+text = "You collected  x coins"
 horizontal_alignment = 1
+autowrap_mode = 2
