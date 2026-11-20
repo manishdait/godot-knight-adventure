@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://cd6g8oaxbsvc7" path="res://assets/fonts/PixelOperator8.ttf" id="6_u5sy4"]
 [ext_resource type="Script" uid="uid://dl03pbt8m7n1p" path="res://scripts/game_manager.gd" id="8_0tnpc"]
 [ext_resource type="FontFile" uid="uid://d0p5vll3ribkj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://yfrgoeciyh3c" path="res://scenes/fruit.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -426,3 +427,8 @@ theme_override_font_sizes/font_size = 8
 text = "You collected  x coins"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="WinningFruit" type="Node" parent="." unique_id=1124472666]
+
+[node name="Fruit2" parent="WinningFruit" unique_id=1605010396 instance=ExtResource("10_vtaks")]
+position = Vector2(455, -103)

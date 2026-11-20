@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://yrkieocl1wtc"]
+
+[ext_resource type="Script" uid="uid://co2m8hcu81t67" path="res://scripts/winning_screen.gd" id="1_xtqdr"]
+[ext_resource type="FontFile" uid="uid://d0p5vll3ribkj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_yhty7"]
+[ext_resource type="FontFile" uid="uid://cd6g8oaxbsvc7" path="res://assets/fonts/PixelOperator8.ttf" id="3_8bwj2"]
+
+[node name="WinScreen" type="Control" unique_id=2130327245]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xtqdr")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=864329631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VerticalBox" type="VBoxContainer" parent="PanelContainer" unique_id=1042664847]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VerticalBox" unique_id=1001198702]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="PanelContainer/VerticalBox/MarginContainer" unique_id=1638730413]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yhty7")
+theme_override_font_sizes/font_size = 32
+text = "You Win"
+
+[node name="Button" type="Button" parent="PanelContainer/VerticalBox" unique_id=223644544]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8bwj2")
+theme_override_font_sizes/font_size = 24
+text = "Restart
+"
+
+[connection signal="pressed" from="PanelContainer/VerticalBox/Button" to="." method="_on_button_pressed"]
