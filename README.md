@@ -21,8 +21,8 @@ git clone https://github.com/manishdait/godot-knight-adventure.git
 cd godot-knight-adventure
 ```
 - Open Godot Engine.
-Click Import and select the project.godot file from the project directory.
-Open the project and press F6 or F5 to run the game.
+- Click Import and select the project.godot file from the project directory.
+- Open the project and press F6 or F5 to run the game.
 
 ## Controls
 
